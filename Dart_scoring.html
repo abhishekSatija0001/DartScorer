@@ -1,0 +1,457 @@
+<html >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<head>
+  <title>dart_scoring</title>
+    <style type="text/css">
+
+    #op{
+      color: black;
+      font-size: 50px;
+      float: right;
+      border-color: white;
+      border-style: solid;
+      background-color: orange;
+      display: block;
+      height: -webkit-fill-available;
+    }
+    .dv{
+      float: left;
+      border-color: white;
+      border-style: solid;
+      width: 100%;
+      background-color: red;
+      height: auto;
+    }
+    button{
+      color: #000033;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: underline;
+      display: inline-block;
+      font-size: 26px;
+      margin: 4px 2px;
+      cursor: pointer;
+      width : 200px;
+      position: absolute; 
+      right: 0;
+      margin-top: 105px;
+      margin-right: 16px;
+    }
+
+    table, th, td {
+      margin-top: -100px;
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 15px 32px;
+      background-color: 0033CC;
+      margin-left: 30px;
+      color: black;
+    }
+    td{
+      height: 700px;
+      background-color: #00CC00;
+      font-size: 25px;
+      vertical-align: text-top;
+      font-style: bold;
+    }
+    #total{
+      background-color: red;
+      font-size: 80px;
+      width: 200px;
+      float: right;
+      height: 200px;
+      margin: 0 auto;
+      margin-right: 6px;
+      border: solid;
+      border-color: #000033;
+      margin-top: 55px;
+    }
+    #heading{
+      background-color: black;
+      color: white;
+      width: 200px;
+      height: 50px;
+      font-size: 50px;
+      vertical-align: top;
+      text-align: center;
+    }
+    </style>
+</head>
+  <body>
+    <div id="container row">
+      <div class="dv col-sm-6">
+        <img class="img" id="img" src="D_art.png" width= "auto" height ="auto" usemap="#dartscore">
+          <map name="dartscore">
+            <area shape="poly" coords="239,211,201,254,171,300,186,308,252,224" id="9*2" href="#" onclick="nineO()"><!--9 outer -->
+            <area shape="poly" coords="293,365,334,311,347,323,310,373" id="9*3" href="#" onclick="nineI()"><!--9 inner -->
+            <area shape="poly" coords="242,208,281,176,333,144,341,161,254,219" id="12*2" href="#" onclick="twelveO()" onclick="h()"><!--12 outer -->
+            <area shape="poly" coords="393,267,338,308,351,320,402,286" id="12*3" href="#" onclick="twelveI()"><!--12 inner -->
+            <area shape="poly" coords="443,108,397,119,336,143,344,159,445,127" id="5*2" href="#" onclick="fiveO()"><!--5 outer -->
+            <area shape="poly" coords="462,246,465,265,405,283,396,267" id="5*3" href="#" onclick="fiveI()"><!--5 inner -->
+            <area shape="poly" coords="559,108,501,103,447,108,450,126,554,126" id="20*2" href="#" onclick="twentyO()"><!--20 outer -->
+            <area shape="poly" coords="534,245,467,244,469,264,531,265" id="20*3" href="#" onclick="twentyI()"><!--20 inner -->
+            <area shape="poly" coords="670,143,615,120,564,108,559,126,662,158" id="1*2" href="#" onclick="oneO()"><!--1 outer -->
+            <area shape="poly" coords="604,268,536,244,532,266,594,283" id="1*3" href="#" onclick="oneI()"><!--1 inner -->
+            <area shape="poly" coords="769,211,731,176,674,145,666,162,755,225" id="18*2" href="#" onclick="eighteenO()"><!--18 outer -->
+            <area shape="poly" coords="665,310,609,269,599,287,649,325" id="18*3" href="#" onclick="eighteenI()"><!--18 inner -->
+            <area shape="poly" coords="839,307,809,260,772,216,757,228,821,315" id="4*2" href="#" onclick="fourO()"><!--4 outer -->
+            <area shape="poly" coords="708,370,667,314,653,328,691,379" id="4*3" href="#" onclick="fourI()"><!--4 inner -->
+            <area shape="poly" coords="878,421,865,369,841,311,822,319,858,423" id="13*2" href="#" onclick="thirteenO()"><!--13 outer -->
+            <area shape="poly" coords="732,441,709,374,691,384,712,443" id="13*3" href="#" onclick="thirteenI()"><!--13 inner -->
+            <area shape="poly" coords="879,542,885,487,880,424,860,428,861,539" id="6*2" href="#" onclick="sixO()"><!--6 outer -->
+            <area shape="poly" coords="734,445,733,517,714,512,712,449" id="6*3" href="#" onclick="sixI()"><!--6 inner -->
+            <area shape="poly" coords="842,660,865,604,880,547,859,543,827,648" id="10*2" href="#" onclick="tenO()"><!--10 outer -->
+            <area shape="poly" coords="710,587,724,554,734,520,709,515,692,576" id="10*3" href="#" onclick="tenI()"><!--10 inner -->
+            <area shape="poly" coords="770,760,808,717,840,663,822,653,755,742" id="15*2" href="#" onclick="fifteenO()"><!--15 outer -->
+            <area shape="poly" coords="664,650,707,591,689,582,651,634" id="15*3" href="#" onclick="fifteenI()"><!--15 inner -->
+            <area shape="poly" coords="669,830,722,801,765,764,748,747,660,809" id="2*2" href="#" onclick="twoO()"><!--2 outer -->
+            <area shape="poly" coords="605,692,636,675,661,654,646,638,594,675" id="2*3" href="#" onclick="twoI()"><!--2 inner -->
+            <area shape="poly" coords="553,866,604,854,665,832,655,813,552,846" id="17*2" href="#" onclick="seventeenO()"><!--17 outer -->
+            <area shape="poly" coords="597,695,531,715,530,696,590,674" id="17*3" href="#" onclick="seventeenI()"><!--17 inner -->
+            <area shape="poly" coords="431,862,485,869,548,866,545,843,436,841" id="3*2" href="#" onclick="threeO()"><!--3 outer -->
+            <area shape="poly" coords="526,717,487,719,458,715,461,695,522,694" id="3*3" href="#" onclick="threeI()"><!--3 inner -->
+            <area shape="poly" coords="427,861,369,845,317,817,327,802,428,842" id="19*2" href="#" onclick="nineteenO()"><!--19 outer -->
+            <area shape="poly" coords="451,713,416,705,385,689,394,672,456,694" id="19*3" href="#" onclick="nineteenI()"><!--19 inner -->
+            <area shape="poly" coords="222,745,263,784,314,817,321,799,236,730" id="7*2" href="#" onclick="sevenO()"><!--7 outer -->
+            <area shape="poly" coords="382,687,353,669,326,644,340,631,390,668" id="7*3" href="#" onclick="sevenI()"><!--7 inner -->
+            <area shape="poly" coords="219,739,184,694,154,645,173,637,233,726" id="16*2" href="#" onclick="sixteenO()"><!--16 outer -->
+            <area shape="poly" coords="325,642,301,611,288,581,301,572,337,629" id="16*3" href="#" onclick="sixteenI()"><!--16 inner -->
+            <area shape="poly" coords="125,531,133,582,154,640,172,632,142,528" id="8*2" href="#" onclick="eightO()"><!--8 outer -->
+            <area shape="poly" coords="264,511,269,543,281,578,301,569,281,509" id="8*3" href="#" onclick="eightI()"><!--8 inner -->
+            <area shape="poly" coords="145,525,140,471,148,416,129,416,124,525" id="11*2" href="#" onclick="elevenO()"><!--11 outer -->
+            <area shape="poly" coords="266,438,262,473,263,509,281,504,283,441" id="11*3" href="#" onclick="elevenI()"><!--11 inner -->
+            <area shape="poly" coords="130,410,148,413,183,311,169,305,144,349" id="14*2" href="#" onclick="fourteenO()"><!--14 outer -->
+            <area shape="poly" coords="291,370,307,378,286,439,267,433,276,399" id="14*3" href="#" onclick="fourteenI()"><!--14 inner -->
+            <area shape="poly" coords="470,449,349,324,330,347,311,376,463,458" id="9*1" href="#" onclick="nineS()"><!--9 single -->
+            <area shape="poly" coords="288,364,308,336,334,308,253,226,188,310" id="9*1" href="#" onclick="nineS()"><!--9 single -->
+            <area shape="poly" coords="472,446,477,441,402,290,354,323" id="12*1" href="#" onclick="twelveS()"><!--12 single -->
+            <area shape="poly" coords="336,305,391,265,341,167,298,190,259,223" id="12*1" href="#" onclick="twelveS()"><!--12 single -->
+            <area shape="poly" coords="480,440,491,436,467,268,442,272,405,287" id="5*1" href="#" onclick="fiveS()"><!--5 single -->
+            <area shape="poly" coords="462,242,394,264,344,163,389,142,448,129" id="5*1" href="#" onclick="fiveS()"><!--5 single -->
+            <area shape="poly" coords="499,438,530,269,498,266,470,270,492,434" id="20*1" href="#" onclick="twentyS()"><!--20 single -->
+            <area shape="poly" coords="534,242,466,241,450,129,501,124,554,130" id="20*1" href="#" onclick="twentyS()"><!--20 single -->
+            <area shape="poly" coords="516,441,594,289,567,276,533,269,502,436" id="1*1" href="#" onclick="oneS()"><!--1 single -->
+            <area shape="poly" coords="606,265,571,252,538,244,558,128,608,140,660,162" id="1*1" href="#" onclick="oneS()"><!--1 single -->
+            <area shape="poly" coords="517,442,522,448,645,327,597,290" id="18*1" href="#" onclick="eighteenS()"><!--18 single -->
+            <area shape="poly" coords="611,265,667,307,751,227,714,195,664,165" id="18*1" href="#" onclick="eighteenS()"><!--18 single -->
+            <area shape="poly" coords="530,458,522,450,649,328,670,352,686,381" id="4*1" href="#" onclick="fourS()"><!--4 single -->
+            <area shape="poly" coords="670,311,756,229,819,317,711,370" id="4*1" href="#" onclick="fourS()"><!--4 single -->
+            <area shape="poly" coords="532,461,688,385,701,414,708,445,534,468" id="13*1" href="#" onclick="thirteenS()"><!--13 single -->
+            <area shape="poly" coords="714,373,727,407,736,439,854,422,842,375,819,322" id="13*1" href="#" onclick="thirteenS()"><!--13 single -->
+            <area shape="poly" coords="534,481,533,470,706,448,712,477,709,512" id="6*1" href="#" onclick="sixS()"><!--6 single -->
+            <area shape="poly" coords="735,442,733,517,859,541,863,483,856,427" id="6*1" href="#" onclick="sixS()"><!--6 single -->
+            <area shape="poly" coords="533,483,530,489,686,579,707,514" id="10*1" href="#" onclick="tenS()"><!--10 single -->
+            <area shape="poly" coords="820,646,844,593,856,542,736,522,715,587" id="10*1" href="#" onclick="tenS()"><!--10 single -->
+            <area shape="poly" coords="647,633,673,606,687,580,529,495,521,504" id="15*1" href="#" onclick="fifteenS()"><!--15 single -->
+            <area shape="poly" coords="820,651,790,698,752,740,666,651,691,623,712,592" id="15*1" href="#" onclick="fifteenS()"><!--15 single -->
+            <area shape="poly" coords="594,672,618,657,645,636,523,506,515,510" id="2*1" href="#" onclick="twoS()"><!--2 single -->
+            <area shape="poly" coords="747,743,664,655,605,698,656,807,707,777" id="2*1" href="#" onclick="twoS()"><!--2 single -->
+            <area shape="poly" coords="589,673,560,687,528,694,500,517,512,514" id="17*1" href="#" onclick="seventeenS()"><!--17 single -->
+            <area shape="poly" coords="530,718,563,712,602,697,656,810,600,831,548,841" id="17*1" href="#" onclick="seventeenS()"><!--17 single -->
+            <area shape="poly" coords="499,516,491,518,461,689,491,694,524,692" id="3*1" href="#" onclick="threeS()"><!--3 single -->
+            <area shape="poly" coords="456,719,492,720,527,721,544,840,492,845,436,836" id="3*1" href="#" onclick="threeS()"><!--3 single -->
+            <area shape="poly" coords="455,690,488,515,476,512,395,666,417,681" id="19*1" href="#" onclick="nineteenS()"><!--19 single -->
+            <area shape="poly" coords="432,836,452,718,413,705,383,690,325,796,374,820" id="19*1" href="#" onclick="nineteenS()"><!--19 single -->
+            <area shape="poly" coords="393,665,474,511,468,504,343,626,365,647" id="7*1" href="#" onclick="sevenS()"><!--7 single -->
+            <area shape="poly" coords="323,796,278,764,241,728,323,647,382,691" id="7*1" href="#" onclick="sevenS()"><!--7 single -->
+            <area shape="poly" coords="466,505,460,491,304,570,318,598,342,625" id="16*1" href="#" onclick="sixteenS()"><!--16 single -->
+            <area shape="poly" coords="322,643,239,725,201,681,177,632,281,583" id="16*1" href="#" onclick="sixteenS()"><!--16 single -->
+            <area shape="poly" coords="304,568,288,508,456,482,458,490" id="8*1" href="#" onclick="eightS()"><!--8 single -->
+            <area shape="poly" coords="176,630,278,578,267,548,259,513,148,528" id="8*1" href="#" onclick="eightS()"><!--8 single -->
+            <area shape="poly" coords="457,468,290,441,283,473,286,505,456,483" id="11*1" href="#" onclick="elevenS()"><!--11 single -->
+            <area shape="poly" coords="260,509,146,526,142,470,151,418,262,435" id="11*1" href="#" onclick="elevenS()"><!--11 single -->
+            <area shape="poly" coords="457,465,291,437,311,380,459,458" id="14*1" href="#" onclick="fourteenS()"><!--14 single -->
+            <area shape="poly" coords="150,412,165,367,189,314,288,366,263,433" id="14*1" href="#" onclick="fourteenS()"><!--14 single -->
+            <area shape="circle" coords="496,476,14.5" id="50" href="#" onclick="bullseye()"><!--bull's eye -->
+            <area shape="poly" coords="525,497,531,469,523,454,509,443,493,441,474,448,465,458,460,476,463,491,474,506,493,512,510,509"- "509,486,513,477,508,468,503,463,497,461,490,462,485,466,482,472,481,481,487,489,500,492" id="25" href="#" onclick="ring()"><!--bull's eye -->
+            <area shape="circle" coords="496,476,642.519"-"496,476,510.236" id="50" href="#" onclick="noscore()">    
+          </map>   
+      </div>
+      <div id="op" class="col-sm-6">
+              <section id="total"><section id="heading">TOTAL</section></section>
+              <br><br><br>
+              <button id="add" onclick="add()">Add Scores</button>
+                
+              
+              <table style="width:20%" id="o">
+                <tr>
+                  <th id="d1">PLAYER</th>
+                </tr>
+              </table>
+      </div>
+  </div>
+    
+    <script type="text/javascript">
+    var score = document.getElementById('o');
+    var sum = 0
+    var tr = score.appendChild(document.createElement('tr'));
+    var td = tr.appendChild(document.createElement('td'));
+    td.id = "a";
+      function nineO(){        
+        document.getElementById('a').innerHTML += "18 <br>"
+        sum += parseInt("18")
+      }
+      function nineI(){        
+        document.getElementById('a').innerHTML += "27<br>"
+        sum += parseInt("27")
+      }
+      function twelveO(){        
+        document.getElementById('a').innerHTML += "24<br>"
+        sum += parseInt("24")
+      }
+      function twelveI(){        
+        document.getElementById('a').innerHTML += "36<br>"
+        sum += parseInt("36")
+      }
+      function fiveO(){        
+        document.getElementById('a').innerHTML += "10<br>"
+        sum += parseInt("10")
+      }
+      function fiveI(){        
+        document.getElementById('a').innerHTML += "15<br>"
+        sum += parseInt("15")
+      }
+      function twentyO(){        
+        document.getElementById('a').innerHTML += "40<br>"
+        sum += parseInt("40")
+      }
+      function twentyI(){        
+        document.getElementById('a').innerHTML += "60<br>"
+        sum += parseInt("60")
+      }
+      function oneO(){        
+        document.getElementById('a').innerHTML += "2<br>"
+        sum += parseInt("2")
+      }
+      function oneI(){        
+        document.getElementById('a').innerHTML += "3<br>"
+        sum += parseInt("3")
+      }
+      function eighteenO(){        
+        document.getElementById('a').innerHTML += "36<br>"
+        sum += parseInt("36")
+      }
+      function eighteenI(){        
+        document.getElementById('a').innerHTML += "54<br>"
+        sum += parseInt("54")
+      }
+      function fourO(){        
+        document.getElementById('a').innerHTML += "8<br>"
+        sum += parseInt("8")
+      }
+      function fourI(){        
+        document.getElementById('a').innerHTML += "12<br>"
+        sum += parseInt("12")
+      }
+      function thirteenO(){       
+        document.getElementById('a').innerHTML += "26<br>"
+        sum += parseInt("26")
+      }
+      function thirteenI(){        
+        document.getElementById('a').innerHTML += "39<br>"
+        sum += parseInt("39")
+      }
+      function sixO(){        
+        document.getElementById('a').innerHTML += "12<br>"
+        sum += parseInt("12")
+      }
+      function sixI(){        
+        document.getElementById('a').innerHTML += "18<br>"
+        sum += parseInt("18")
+      }
+      function tenO(){        
+        document.getElementById('a').innerHTML += "20<br>"
+        sum += parseInt("20")
+      }
+      function tenI(){        
+        document.getElementById('a').innerHTML += "30<br>"
+        sum += parseInt("30")
+      }
+      function fifteenO(){        
+        document.getElementById('a').innerHTML += "30<br>"
+        sum += parseInt("30")
+      }
+      function fifteenI(){        
+        document.getElementById('a').innerHTML += "45<br>"
+        sum += parseInt("45")
+      }
+      function twoO(){        
+        document.getElementById('a').innerHTML += "4<br>"
+        sum += parseInt("4")
+      }
+      function twoI(){        
+        document.getElementById('a').innerHTML += "6<br>"
+        sum += parseInt("6")
+      }
+      function seventeenO(){        
+        document.getElementById('a').innerHTML += "34<br>"
+        sum += parseInt("34")
+      }
+      function seventeenI(){        
+        document.getElementById('a').innerHTML += "51<br>"
+        sum += parseInt("51")
+      }
+      function threeO(){        
+        document.getElementById('a').innerHTML += "6<br>"
+        sum += parseInt("6")
+      }
+      function threeI(){
+        document.getElementById('a').innerHTML += "9<br>"
+        sum += parseInt("9")
+      }
+      function nineteenO(){
+        document.getElementById('a').innerHTML += "38<br>"
+        sum += parseInt("38")
+      }
+      function nineteenI(){
+        document.getElementById('a').innerHTML += "57<br>"
+        sum += parseInt("57")
+      }
+      function sevenO(){
+        document.getElementById('a').innerHTML += "14<br>"
+        sum += parseInt("14")
+      }
+      function sevenI(){
+        document.getElementById('a').innerHTML += "21<br>"
+        sum += parseInt("21")
+      }
+      function sixteenO(){
+        document.getElementById('a').innerHTML += "32<br>"
+        sum += parseInt("32")
+      }
+      function sixteenI(){
+        document.getElementById('a').innerHTML += "48<br>"
+        sum += parseInt("48")
+      }
+      function eightO(){
+        document.getElementById('a').innerHTML += "16<br>"
+        sum += parseInt("16")
+      }
+      function eightI(){
+        document.getElementById('a').innerHTML += "24<br>"
+        sum += parseInt("24")
+      }
+      function elevenO(){
+        document.getElementById('a').innerHTML += "22<br>"
+        sum += parseInt("22")
+      }
+      function elevenI(){
+        document.getElementById('a').innerHTML += "33<br>"
+        sum += parseInt("33")
+      }
+      function fourteenO(){
+        document.getElementById('a').innerHTML += "28<br>"
+        sum += parseInt("28")
+      }
+      function fourteenI(){
+        document.getElementById('a').innerHTML += "42<br>"
+        sum += parseInt("42")
+      }
+      function nineS(){
+        document.getElementById('a').innerHTML += "9<br>"
+        sum += parseInt("9")
+      }
+      function twelveS(){
+        document.getElementById('a').innerHTML += "12<br>"
+        sum += parseInt("27")
+      }
+      function fiveS(){
+        document.getElementById('a').innerHTML += "5<br>"
+        sum += parseInt("12")
+      }
+      function twentyS(){
+        document.getElementById('a').innerHTML += "20<br>"
+        sum += parseInt("20")
+      }
+      function oneS(){
+        document.getElementById('a').innerHTML += "1<br>"
+        sum += parseInt("1")
+      }
+      function eighteenS(){
+        document.getElementById('a').innerHTML += "18<br>"
+        sum += parseInt("18")
+      }
+      function fourS(){
+        document.getElementById('a').innerHTML += "4<br>"
+        sum += parseInt("4")
+      }
+      function thirteenS(){
+        document.getElementById('a').innerHTML += "13<br>"
+        sum += parseInt("13")
+      }
+      function sixS(){
+        document.getElementById('a').innerHTML += "6<br>"
+        sum += parseInt("6")
+      }
+      function tenS(){
+        document.getElementById('a').innerHTML += "10<br>"
+        sum += parseInt("10")
+      }
+      function fifteenS(){
+        document.getElementById('a').innerHTML += "15<br>"
+        sum += parseInt("15")
+      }
+      function twoS(){
+        document.getElementById('a').innerHTML += "2<br>"
+        sum += parseInt("2")
+      }
+      function seventeenS(){
+        document.getElementById('a').innerHTML += "17<br>"
+        sum += parseInt("17")
+      }
+      function threeS(){
+        document.getElementById('a').innerHTML += "3<br>"
+        sum += parseInt("3")
+      }
+      function nineteenS(){
+        document.getElementById('a').innerHTML += "19<br>"
+        sum += parseInt("19")
+      }
+      function sevenS(){
+        document.getElementById('a').innerHTML += "7<br>"
+        sum += parseInt("7")
+      }
+      function sixteenS(){
+        document.getElementById('a').innerHTML += "16<br>"
+        sum += parseInt("16")
+      }
+      function eightS(){
+        document.getElementById('a').innerHTML += "8<br>"
+        sum += parseInt("8")
+      }
+      function elevenS(){
+        document.getElementById('a').innerHTML += "11<br>"
+        sum += parseInt("11")
+      }
+      function fourteenS(){
+        document.getElementById('a').innerHTML += "14<br>"
+        sum += parseInt("14")
+      }
+      function bullseye(){        
+        document.getElementById('a').innerHTML += "50<br>"
+        sum += parseInt('50')
+        alert("Bull's Eye....!!");
+      }
+      function ring(){
+        document.getElementById('a').innerHTML += "25<br>"
+        sum += parseInt('25')
+      }
+      function add(){
+        document.getElementById('total').innerHTML = sum;
+      }
+      function noscore(){
+        document.getElementById('a').innerHTML += "0<br>"
+        sum += parseInt('0')
+      }
+    </script>
+  </body>
+</html>
